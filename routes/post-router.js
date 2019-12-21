@@ -27,13 +27,13 @@ router.get("/all", (req, res) => {
     });
 });
 //readd restricted,
-router.get("/:id", restricted, (req, res) => {
+router.get("/:id",  (req, res) => {
   const { id } = req.params;
   console.log(req.params)
 
   db("posts")
     .returning("id")
-     .where({ id, user_id: req.decodedToken.subject })
+    //  .where({ id, user_id: req.decodedToken.subject })
     .first()
     .then(post => {
       if (post) {
