@@ -26,14 +26,17 @@ router.get("/all", (req, res) => {
       res.status(500).json({ error: "The posts could not be retrieved." });
     });
 });
+
 //readd restricted,
-router.get("/:id",  (req, res) => {
+router.get("/:id", (req, res) => {
   const { id } = req.params;
-  console.log(req.params)
+  console.log("req params", req.params)
+  
 
   db("posts")
     .returning("id")
-    //  .where({ id, user_id: req.decodedToken.subject })
+    .where({id})
+     //.where({ id, user_id: req.decodedToken.subject })
     .first()
     .then(post => {
       if (post) {
@@ -123,6 +126,32 @@ router.put("/:id", restricted, (req, res) => {
           error: "The post could not be removed."
         });
       });
+});
+// test 
+router.get("/:Type",  (req, res) => {
+  const { Type } = req.params;
+  console.log("req params", req.params)
+  
+
+  db("posts")
+    .returning("Type")
+    .where({Type})
+     //.where({ id, user_id: req.decodedToken.subject })
+    
+    .then(post => {
+      if (post) {
+        res.status(200).json(post);
+      } else {
+        res
+          .status(404)
+          .json({ error: "You cannot access the post with this specific id." });
+      }
+    })
+    .catch(error => {
+      res.status(500).json({
+        error: "The action with the specified ID could not be retrieved"
+      });
+    });
 });
 
 module.exports = router;

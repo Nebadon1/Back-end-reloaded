@@ -3,7 +3,8 @@ const db = require("../data/db-config.js");
 module.exports = {
   getAllPosts,
   insert,
-  addPost
+  addPost,
+  findPostById
 };
 
 function getAllPosts() {
