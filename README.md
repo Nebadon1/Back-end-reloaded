@@ -3,6 +3,9 @@
 ## Heroku Deployment##
 https://chef-portfolio-done-right.herokuapp.com/
 
+## Documentation ##
+https://documenter.getpostman.com/view/8589653/SWLh4RQA?version=latest
+
 ## Description
 
 This project is a RESTful API built using Node and Express. The purpose of this project is to provide a Backend for a Chef Portfolio web application. User registration, login, post creation, deletion, fetching, or editing, are all handled here.
