@@ -24,7 +24,7 @@ server.use("/api/type", typeRouter);
 server.use("/api/time", timeRouter)
 server.use("/api/users", usersRouter)
 server.get('/', (req, res)=>{
-    res.send(`<h1> 🔨 Server is up and running</h1> <img src="https://makeupline.net/2017/08/09/yes-we-are-open/">`)
+    res.send(`<h1> 🔨 Server is up and running</h1>`)
 })
 
 module.exports = server;

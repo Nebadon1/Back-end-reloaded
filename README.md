@@ -54,7 +54,7 @@ Run the server
 npm run server
 ```
 
-## End Points##
+## End Points ##
 ## Parameters ##
 ## Routes ##
 please visit: https://documenter.getpostman.com/view/8589653/SWLh4RQA?version=latest
