@@ -24,7 +24,7 @@ server.use("/api/type", typeRouter);
 server.use("/api/time", timeRouter)
 server.use("/api/users", usersRouter)
 server.get('/', (req, res)=>{
-    res.send(`<h1> 🔨 Server is up and running</h1> <img src="https://www.oh-i-see.com/blog/wp-content/uploads/2013/10/95732246sized.jpg" alt="Italian Trulli">`)
+    res.send(`<h1> 🔨 Server is up and running</h1> <img src="https://makeupline.net/2017/08/09/yes-we-are-open/">`)
 })
 
 module.exports = server;
